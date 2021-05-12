@@ -48,6 +48,8 @@ main header h1 {
   font-size: var(--header-font-size);
   font-weight: 100;
   margin-left: 1rem;
+  -webkit-animation: header-animate 1s ease forwards 100ms;
+          animation: header-animate 1s ease forwards 100ms;
 }
 
 @media screen and (max-width: 650px) {
@@ -57,9 +59,53 @@ main header h1 {
   }
 }
 
+@-webkit-keyframes header-animate {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(4);
+            transform: scale(4);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes header-animate {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(4);
+            transform: scale(4);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+main header .icon {
+  -webkit-animation: header-animate 1s ease forwards 100ms;
+          animation: header-animate 1s ease forwards 100ms;
+}
+
 main header .icon svg {
   font-size: 4rem;
   color: purple;
+}
+
+@keyframes header-animate {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(4);
+            transform: scale(4);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
 main .input-note-container {
@@ -80,6 +126,34 @@ main .input-note-container {
   width: 50%;
   margin: 3rem auto 3rem auto;
   position: relative;
+  -webkit-animation: inputter 1s ease forwards 150ms;
+          animation: inputter 1s ease forwards 150ms;
+}
+
+@-webkit-keyframes inputter {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(20rem) scale(3);
+            transform: translateY(20rem) scale(3);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0) scale(1);
+            transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes inputter {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(20rem) scale(3);
+            transform: translateY(20rem) scale(3);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0) scale(1);
+            transform: translateY(0) scale(1);
+  }
 }
 
 main .input-note-container input,
@@ -158,6 +232,34 @@ main .input-note-container button svg {
   min-height: 15rem;
   position: relative;
   overflow: hidden;
+  -webkit-animation: list-animate 1s ease forwards 250ms;
+          animation: list-animate 1s ease forwards 250ms;
+}
+
+@-webkit-keyframes list-animate {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-15rem) rotate(30deg);
+            transform: translateY(-15rem) rotate(30deg);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0) rotate(0);
+            transform: translateY(0) rotate(0);
+  }
+}
+
+@keyframes list-animate {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-15rem) rotate(30deg);
+            transform: translateY(-15rem) rotate(30deg);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0) rotate(0);
+            transform: translateY(0) rotate(0);
+  }
 }
 
 .output-note-container div:hover {
@@ -172,7 +274,7 @@ main .input-note-container button svg {
   width: 0.3rem;
   bottom: 0;
   left: 0;
-  background: #ec5d1b;
+  background: #fa773b;
   -webkit-transition: 0.25s;
   transition: 0.25s;
   z-index: -1;
