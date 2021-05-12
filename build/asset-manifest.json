@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/React-Note-App/static/css/main.85abf0ef.chunk.css",
-    "main.js": "/React-Note-App/static/js/main.02b4d300.chunk.js",
-    "main.js.map": "/React-Note-App/static/js/main.02b4d300.chunk.js.map",
-    "runtime-main.js": "/React-Note-App/static/js/runtime-main.81eb179c.js",
-    "runtime-main.js.map": "/React-Note-App/static/js/runtime-main.81eb179c.js.map",
-    "static/js/2.80be6db9.chunk.js": "/React-Note-App/static/js/2.80be6db9.chunk.js",
-    "static/js/2.80be6db9.chunk.js.map": "/React-Note-App/static/js/2.80be6db9.chunk.js.map",
+    "main.css": "/React-Note-App/static/css/main.162d6519.chunk.css",
+    "main.js": "/React-Note-App/static/js/main.929eacda.chunk.js",
+    "main.js.map": "/React-Note-App/static/js/main.929eacda.chunk.js.map",
+    "runtime-main.js": "/React-Note-App/static/js/runtime-main.a811b331.js",
+    "runtime-main.js.map": "/React-Note-App/static/js/runtime-main.a811b331.js.map",
+    "static/js/2.1be26f20.chunk.js": "/React-Note-App/static/js/2.1be26f20.chunk.js",
+    "static/js/2.1be26f20.chunk.js.map": "/React-Note-App/static/js/2.1be26f20.chunk.js.map",
     "static/js/3.37f855ff.chunk.js": "/React-Note-App/static/js/3.37f855ff.chunk.js",
     "static/js/3.37f855ff.chunk.js.map": "/React-Note-App/static/js/3.37f855ff.chunk.js.map",
-    "static/js/4.f428e836.chunk.js": "/React-Note-App/static/js/4.f428e836.chunk.js",
-    "static/js/4.f428e836.chunk.js.map": "/React-Note-App/static/js/4.f428e836.chunk.js.map",
+    "static/js/4.beeff8d3.chunk.js": "/React-Note-App/static/js/4.beeff8d3.chunk.js",
+    "static/js/4.beeff8d3.chunk.js.map": "/React-Note-App/static/js/4.beeff8d3.chunk.js.map",
     "index.html": "/React-Note-App/index.html",
-    "static/css/main.85abf0ef.chunk.css.map": "/React-Note-App/static/css/main.85abf0ef.chunk.css.map",
-    "static/js/2.80be6db9.chunk.js.LICENSE.txt": "/React-Note-App/static/js/2.80be6db9.chunk.js.LICENSE.txt",
+    "static/css/main.162d6519.chunk.css.map": "/React-Note-App/static/css/main.162d6519.chunk.css.map",
+    "static/js/2.1be26f20.chunk.js.LICENSE.txt": "/React-Note-App/static/js/2.1be26f20.chunk.js.LICENSE.txt",
     "static/js/3.37f855ff.chunk.js.LICENSE.txt": "/React-Note-App/static/js/3.37f855ff.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.81eb179c.js",
+    "static/js/runtime-main.a811b331.js",
     "static/js/3.37f855ff.chunk.js",
-    "static/css/main.85abf0ef.chunk.css",
-    "static/js/main.02b4d300.chunk.js"
+    "static/css/main.162d6519.chunk.css",
+    "static/js/main.929eacda.chunk.js"
   ]
 }

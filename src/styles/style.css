@@ -20,7 +20,7 @@ html {
 .light-theme {
   --body-bg-clr: linear-gradient(
         145deg,
-        rgb(90, 121, 221) 50%,
+        rgb(80, 155, 253) 50%,
         rgb(16, 110, 110) 0%,
         rgb(226, 220, 220)
     );
@@ -57,9 +57,9 @@ html {
 .dark-theme {
   --body-bg-clr: linear-gradient(
         145deg,
-        rgba(22, 13, 13, 1) 50%,
-        rgba(18, 21, 27, 1) 0%,
-        rgb(18, 14, 15)
+        rgb(18, 58, 73) 50%,
+        rgb(3, 19, 54) 0%,
+        rgb(10, 9, 9)
     );
   --body-font-clr: rgb(229, 226, 226);
   --header-font-size: clamp(2rem, 3rem, 3vw);
