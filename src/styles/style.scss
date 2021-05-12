@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    appearance: none;
+    transition: all 0.25s ease;
+}
+html {
+    font-size: 62.5%;
+    font-family: sans-serif;
+}
+:root {
+    --body-bg-clr: white;
+    --body-font-clr: rgb(5, 5, 5);
+
+    --header-font-size: clamp(1.8rem, 3rem, 3vw);
+}
+body {
+    background: var(--body-bg-clr);
+    color: var(--body-font-clr);
+}
+main {
+    width: clamp(90vw, 150rem, 90vw);
+    margin: 0 auto;
+
+    header {
+        display: flex;
+        align-items: center;
+        padding: 0.5rem;
+        border-bottom: 1px solid purple;
+        h1 {
+            font-size: var(--header-font-size);
+            font-weight: 100;
+            margin-left: 1rem;
+        }
+        .icon {
+            svg {
+                font-size: 4rem;
+                color: purple;
+            }
+        }
+    }
+
+    .input-note-container {
+        // border:1px solid red;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        width: 50%;
+        margin: 0 auto;
+        position: relative;
+
+        input,
+        textarea {
+            box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.5);
+            font-size: clamp(1.8rem, 2.2rem, 3vw);
+            letter-spacing: 0.1rem;
+            width: 100%;
+            background: rgb(228, 161, 228);
+            border-radius: 0.3rem;
+            margin: 0.3rem;
+            text-align: center;
+            padding: 0.4rem 1rem;
+            font-family: inherit;
+
+            &:focus,
+            &:focus-within {
+                background: rgb(231, 137, 217);
+            }
+        }
+        @media screen and (max-width: 650px) {
+            width: 100%;
+        }
+        textarea {
+            min-height: 13rem;
+            text-align: left;
+            resize: none;
+        }
+        button {
+            position: absolute;
+            right: -1rem;
+            bottom: -0.8rem;
+            transform: scale(0.6);
+            background: rgb(6, 224, 79);
+            border-radius: 50%;
+            height: 5.5rem;
+            width: 4rem;
+            &:hover {
+                background: rgb(4, 185, 64);
+                box-shadow: 0 0.3rem 1rem rgba(49, 38, 46, 0.5);
+            }
+            svg {
+                font-size: clamp(3rem, 3.5rem, 3vw);
+            }
+        }
+    }
+    .output-note-container {
+        width: 100%;
+        margin-top: 2rem;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 30rem));
+        grid-gap: 2rem;
+        div {
+            background: rgb(248, 168, 248);
+            box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.3);
+            border-radius: 0.5rem;
+            min-height: 15rem;
+            &:hover {
+                background: rgb(235, 124, 235);
+                // box-shadow:0.3rem 0.3rem 1rem rgba(purple,0.5);
+                transform: scale(1.07);
+            }
+            h1,
+            p {
+                padding: 0.3rem 1rem;
+            }
+            h1 {
+                text-align: center;
+                font-size: clamp(1.6rem, 2.2rem, 3vw);
+                font-weight: 100;
+                border-bottom: 1px dotted purple;
+            }
+            p {
+                font-size: clamp(1.4rem, 1.9rem, 3vw);
+            }
+        }
+    }
+}
