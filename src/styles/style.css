@@ -17,15 +17,89 @@ html {
   font-family: sans-serif;
 }
 
-:root {
-  --body-bg-clr: white;
-  --body-font-clr: rgb(5, 5, 5);
-  --header-font-size: clamp(1.8rem, 3rem, 3vw);
+.light-theme {
+  --body-bg-clr: linear-gradient(
+        145deg,
+        rgb(90, 121, 221) 50%,
+        rgb(16, 110, 110) 0%,
+        rgb(226, 220, 220)
+    );
+  --body-font-clr: rgb(212, 209, 209);
+  --header-font-size: clamp(2rem, 3rem, 3vw);
+  --header-h1-font-clr: black;
+  --header-svg-clr: purple;
+  --primary-bg-clr: linear-gradient(
+        120deg,
+        rgb(123, 20, 220) 0%,
+        purple 80%,
+        rgb(149, 79, 196) 100%
+    );
+  --normal-font-clr: rgb(240, 240, 240);
+  --input-bg-clr: linear-gradient(135deg, rgb(123, 20, 220), purple, purple);
+  --input-focus-bg-clr: linear-gradient(
+        135deg,
+        rgb(111, 9, 206),
+        rgb(141, 3, 141) 20%,
+        purple
+    );
+  --input-box-iner-shadow-clr: rgb(88, 86, 86);
+  --input-box-iner-shadow-clr2: rgb(99, 98, 98);
+  --border-clr: purple;
+  --output-div-before-bg-clr: rgb(250, 119, 59);
+  --output-div-hover-bg-clr: linear-gradient(
+        120deg,
+        rgb(123, 20, 220) 0%,
+        purple 50%,
+        rgb(149, 79, 196) 100%
+    );
+}
+
+.dark-theme {
+  --body-bg-clr: linear-gradient(
+        145deg,
+        rgba(22, 13, 13, 1) 50%,
+        rgba(18, 21, 27, 1) 0%,
+        rgb(18, 14, 15)
+    );
+  --body-font-clr: rgb(229, 226, 226);
+  --header-font-size: clamp(2rem, 3rem, 3vw);
+  --header-h1-font-clr: rgb(231, 230, 230);
+  --header-svg-clr: rgb(160, 3, 207);
+  --primary-bg-clr: linear-gradient(
+        120deg,
+        rgb(69, 13, 109) 0%,
+        rgb(123, 20, 220) 100%
+    );
+  --normal-font-clr: rgb(226, 224, 224);
+  --input-bg-clr: linear-gradient(
+        135deg,
+        rgb(129, 18, 233),
+        rgb(134, 9, 134),
+        purple
+    );
+  --input-focus-bg-clr: linear-gradient(
+        135deg,
+        rgb(111, 9, 206),
+        rgb(141, 3, 141) 20%,
+        purple
+    );
+  --input-box-iner-shadow-clr: rgb(8, 8, 8);
+  --input-box-iner-shadow-clr2: rgb(43, 43, 43);
+  --border-clr: rgb(123, 7, 201);
+  --output-div-before-bg-clr: rgb(123, 7, 201);
+  --output-div-hover-bg-clr: linear-gradient(
+        120deg,
+        rgb(69, 13, 109) 0%,
+        rgb(123, 20, 220) 80%,
+        rgb(133, 133, 133)
+    );
 }
 
 body {
   background: var(--body-bg-clr);
   color: var(--body-font-clr);
+  min-height: 100vh;
+  background-repeat: no-repeat;
 }
 
 main {
@@ -41,7 +115,7 @@ main header {
       -ms-flex-align: center;
           align-items: center;
   padding: 0.5rem;
-  border-bottom: 1px solid purple;
+  border-bottom: 1px solid var(--border-clr);
 }
 
 main header h1 {
@@ -50,6 +124,7 @@ main header h1 {
   margin-left: 1rem;
   -webkit-animation: header-animate 1s ease forwards 100ms;
           animation: header-animate 1s ease forwards 100ms;
+  color: var(--header-h1-font-clr);
 }
 
 @media screen and (max-width: 650px) {
@@ -60,12 +135,12 @@ main header h1 {
 }
 
 @-webkit-keyframes header-animate {
-  from {
+  0% {
     opacity: 0;
     -webkit-transform: scale(4);
             transform: scale(4);
   }
-  to {
+  100% {
     opacity: 1;
     -webkit-transform: scale(1);
             transform: scale(1);
@@ -73,12 +148,12 @@ main header h1 {
 }
 
 @keyframes header-animate {
-  from {
+  0% {
     opacity: 0;
     -webkit-transform: scale(4);
             transform: scale(4);
   }
-  to {
+  100% {
     opacity: 1;
     -webkit-transform: scale(1);
             transform: scale(1);
@@ -92,7 +167,7 @@ main header .icon {
 
 main header .icon svg {
   font-size: 4rem;
-  color: purple;
+  color: var(--header-svg-clr);
 }
 
 @keyframes header-animate {
@@ -158,23 +233,49 @@ main .input-note-container {
 
 main .input-note-container input,
 main .input-note-container textarea {
-  -webkit-box-shadow: 0.7rem 0.7rem 1rem rgba(0, 0, 0, 0.4);
-          box-shadow: 0.7rem 0.7rem 1rem rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0.7rem 0.7rem 1rem var(--input-box-shadow-clr);
+          box-shadow: 0.7rem 0.7rem 1rem var(--input-box-shadow-clr);
+  -webkit-box-shadow: inset 0.3rem 0.3rem 0.6rem var(--input-box-iner-shadow-clr);
+          box-shadow: inset 0.3rem 0.3rem 0.6rem var(--input-box-iner-shadow-clr);
+  -webkit-box-shadow: inset -0.3rem -0.3rem 0.6rem var(--input-box-iner-shadow-clr2);
+          box-shadow: inset -0.3rem -0.3rem 0.6rem var(--input-box-iner-shadow-clr2);
   font-size: clamp(1.8rem, 2.2rem, 3vw);
   letter-spacing: 0.1rem;
   width: 100%;
-  background: #e4a1e4;
+  background: var(--input-bg-clr);
   border-radius: 0.3rem;
   margin: 0.3rem;
   text-align: center;
   padding: 0.4rem 1rem;
   font-family: inherit;
+  color: var(--normal-font-clr);
+}
+
+main .input-note-container input::-webkit-input-placeholder,
+main .input-note-container textarea::-webkit-input-placeholder {
+  color: var(--normal-font-clr);
+}
+
+main .input-note-container input:-ms-input-placeholder,
+main .input-note-container textarea:-ms-input-placeholder {
+  color: var(--normal-font-clr);
+}
+
+main .input-note-container input::-ms-input-placeholder,
+main .input-note-container textarea::-ms-input-placeholder {
+  color: var(--normal-font-clr);
+}
+
+main .input-note-container input::placeholder,
+main .input-note-container textarea::placeholder {
+  color: var(--normal-font-clr);
 }
 
 main .input-note-container input:focus, main .input-note-container input:focus-within,
 main .input-note-container textarea:focus,
 main .input-note-container textarea:focus-within {
-  background: #e789d9;
+  background: var(--input-focus-bg-clr);
+  color: white;
 }
 
 @media screen and (max-width: 650px) {
@@ -225,74 +326,33 @@ main .input-note-container button svg {
 }
 
 .output-note-container div {
-  background: #f8a8f8;
-  -webkit-box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
-          box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
+  background: var(--primary-bg-clr);
+  -webkit-box-shadow: 0.5rem 0.5rem 1rem var(--output-div-box-shadow-clr);
+          box-shadow: 0.5rem 0.5rem 1rem var(--output-div-box-shadow-clr);
   border-radius: 0.5rem;
   min-height: 15rem;
   position: relative;
   overflow: hidden;
-  -webkit-animation: list-animate 1s ease forwards 250ms;
-          animation: list-animate 1s ease forwards 250ms;
-}
-
-@-webkit-keyframes list-animate {
-  from {
-    opacity: 0;
-    -webkit-transform: translateY(-15rem) rotate(30deg);
-            transform: translateY(-15rem) rotate(30deg);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateY(0) rotate(0);
-            transform: translateY(0) rotate(0);
-  }
-}
-
-@keyframes list-animate {
-  from {
-    opacity: 0;
-    -webkit-transform: translateY(-15rem) rotate(30deg);
-            transform: translateY(-15rem) rotate(30deg);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateY(0) rotate(0);
-            transform: translateY(0) rotate(0);
-  }
+  -webkit-animation: list-animate 1s ease forwards;
+          animation: list-animate 1s ease forwards;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
 }
 
 .output-note-container div:hover {
   -webkit-transform: scale(1.07);
           transform: scale(1.07);
-}
-
-.output-note-container div:before {
-  position: absolute;
-  content: '';
-  height: 0%;
-  width: 0.3rem;
-  bottom: 0;
-  left: 0;
-  background: #fa773b;
-  -webkit-transition: 0.25s;
-  transition: 0.25s;
-  z-index: -1;
+  background: var(--output-div-hover-bg-clr);
 }
 
 .output-note-container div:after {
   position: absolute;
   content: '';
   height: 100%;
-  width: 0.3rem;
-  background: #01a337;
+  width: 0.5rem;
+  background: #03df4c;
   left: 0;
   bottom: 0;
-}
-
-.output-note-container div:hover::before {
-  width: 100%;
-  height: 100%;
 }
 
 .output-note-container div:hover::after {
@@ -302,13 +362,14 @@ main .input-note-container button svg {
 .output-note-container div h1,
 .output-note-container div p {
   padding: 0.3rem 1rem;
+  color: var(--normal-font-clr);
 }
 
 .output-note-container div h1 {
   text-align: center;
-  font-size: clamp(1.9rem, 2.2rem, 3vw);
+  font-size: clamp(2rem, 2.2rem, 3vw);
   font-weight: 100;
-  border-bottom: 1px dotted purple;
+  border-bottom: 1px dotted var(--border-clr);
 }
 
 .output-note-container div p {
