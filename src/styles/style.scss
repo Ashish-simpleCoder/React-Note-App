@@ -34,6 +34,10 @@ main {
             font-size: var(--header-font-size);
             font-weight: 100;
             margin-left: 1rem;
+            @media screen and (max-width: 650px) {
+                font-weight: bold;
+                letter-spacing: 0.1rem;
+            }
         }
         .icon {
             svg {
@@ -129,5 +133,9 @@ main {
         p {
             font-size: clamp(1.4rem, 1.9rem, 3vw);
         }
+    }
+    @media screen and (max-width: 650px) {
+        grid-template-columns: 0.9fr;
+        margin-top: 4rem;
     }
 }

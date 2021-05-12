@@ -50,6 +50,13 @@ main header h1 {
   margin-left: 1rem;
 }
 
+@media screen and (max-width: 650px) {
+  main header h1 {
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+  }
+}
+
 main header .icon svg {
   font-size: 4rem;
   color: purple;
@@ -172,5 +179,13 @@ main .input-note-container button svg {
 
 .output-note-container div p {
   font-size: clamp(1.4rem, 1.9rem, 3vw);
+}
+
+@media screen and (max-width: 650px) {
+  .output-note-container {
+    -ms-grid-columns: 0.9fr;
+        grid-template-columns: 0.9fr;
+    margin-top: 4rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
