@@ -131,7 +131,7 @@ main .input-note-container button svg {
   font-size: clamp(3rem, 3.5rem, 3vw);
 }
 
-main .output-note-container {
+.output-note-container {
   width: 100%;
   margin-top: 2rem;
   display: -ms-grid;
@@ -144,7 +144,7 @@ main .output-note-container {
   grid-gap: 2rem;
 }
 
-main .output-note-container div {
+.output-note-container div {
   background: #f8a8f8;
   -webkit-box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.3);
           box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.3);
@@ -152,25 +152,25 @@ main .output-note-container div {
   min-height: 15rem;
 }
 
-main .output-note-container div:hover {
+.output-note-container div:hover {
   background: #eb7ceb;
   -webkit-transform: scale(1.07);
           transform: scale(1.07);
 }
 
-main .output-note-container div h1,
-main .output-note-container div p {
+.output-note-container div h1,
+.output-note-container div p {
   padding: 0.3rem 1rem;
 }
 
-main .output-note-container div h1 {
+.output-note-container div h1 {
   text-align: center;
   font-size: clamp(1.6rem, 2.2rem, 3vw);
   font-weight: 100;
   border-bottom: 1px dotted purple;
 }
 
-main .output-note-container div p {
+.output-note-container div p {
   font-size: clamp(1.4rem, 1.9rem, 3vw);
 }
 /*# sourceMappingURL=style.css.map */
