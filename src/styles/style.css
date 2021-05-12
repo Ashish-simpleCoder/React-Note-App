@@ -76,17 +76,16 @@ main .input-note-container {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 2rem;
   margin-bottom: 2rem;
   width: 50%;
-  margin: 0 auto;
+  margin: 3rem auto 3rem auto;
   position: relative;
 }
 
 main .input-note-container input,
 main .input-note-container textarea {
-  -webkit-box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.5);
-          box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0.7rem 0.7rem 1rem rgba(0, 0, 0, 0.4);
+          box-shadow: 0.7rem 0.7rem 1rem rgba(0, 0, 0, 0.4);
   font-size: clamp(1.8rem, 2.2rem, 3vw);
   letter-spacing: 0.1rem;
   width: 100%;
@@ -146,23 +145,56 @@ main .input-note-container button svg {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-grid-columns: (minmax(20rem, 30rem))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(20rem, 30rem));
-  grid-gap: 2rem;
+  -ms-grid-columns: (minmax(20rem, 35rem))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 35rem));
+  grid-gap: 4rem;
 }
 
 .output-note-container div {
   background: #f8a8f8;
-  -webkit-box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.3);
-          box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
   border-radius: 0.5rem;
   min-height: 15rem;
+  position: relative;
+  overflow: hidden;
 }
 
 .output-note-container div:hover {
-  background: #eb7ceb;
   -webkit-transform: scale(1.07);
           transform: scale(1.07);
+}
+
+.output-note-container div:before {
+  position: absolute;
+  content: '';
+  height: 0%;
+  width: 0.3rem;
+  bottom: 0;
+  left: 0;
+  background: #ec5d1b;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  z-index: -1;
+}
+
+.output-note-container div:after {
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 0.3rem;
+  background: #01a337;
+  left: 0;
+  bottom: 0;
+}
+
+.output-note-container div:hover::before {
+  width: 100%;
+  height: 100%;
+}
+
+.output-note-container div:hover::after {
+  display: none;
 }
 
 .output-note-container div h1,
@@ -172,13 +204,51 @@ main .input-note-container button svg {
 
 .output-note-container div h1 {
   text-align: center;
-  font-size: clamp(1.6rem, 2.2rem, 3vw);
+  font-size: clamp(1.9rem, 2.2rem, 3vw);
   font-weight: 100;
   border-bottom: 1px dotted purple;
 }
 
 .output-note-container div p {
-  font-size: clamp(1.4rem, 1.9rem, 3vw);
+  font-size: clamp(1.7rem, 2.1rem, 3vw);
+}
+
+.output-note-container div button.editBtn {
+  position: absolute;
+  left: 0;
+  bottom: -0.7rem;
+  background: #f5ebeb;
+  height: 5.5rem;
+  border-radius: 50%;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+}
+
+.output-note-container div button.editBtn:hover svg {
+  color: #22e222;
+}
+
+.output-note-container div button.editBtn svg {
+  font-size: 3.5rem;
+}
+
+.output-note-container div button.deleteBtn {
+  position: absolute;
+  right: 0;
+  bottom: -0.7rem;
+  background: #f5ebeb;
+  height: 5.5rem;
+  border-radius: 50%;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+}
+
+.output-note-container div button.deleteBtn:hover svg {
+  color: #f81818;
+}
+
+.output-note-container div button.deleteBtn svg {
+  font-size: 3.5rem;
 }
 
 @media screen and (max-width: 650px) {

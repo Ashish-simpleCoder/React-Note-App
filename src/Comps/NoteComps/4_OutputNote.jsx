@@ -1,9 +1,10 @@
 import { Button } from '@material-ui/core';
 import { Delete, Edit } from '@material-ui/icons';
+import { useRef } from 'react';
 
 export default function OutputNote(props) {
     const { note_arr, dispatch } = props;
-    // const { isEdit } = props.note_arr;
+
     return (
         <section className="output-note-container">
             {note_arr.map((note) => {
@@ -20,6 +21,7 @@ export default function OutputNote(props) {
                             {note.content}
                         </p>
                         <Button
+                            className="editBtn"
                             onClick={() =>
                                 dispatch({
                                     type: 'editNote',
@@ -32,6 +34,7 @@ export default function OutputNote(props) {
                             <Edit />
                         </Button>
                         <Button
+                            className="deleteBtn"
                             onClick={() =>
                                 dispatch({ type: 'deleteNote', id: note.id })
                             }
